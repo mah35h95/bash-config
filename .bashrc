@@ -10,7 +10,7 @@ shopt -s histappend
 
 # custome prompt function
 # Bash: when in a git repository, show the current branch, indicate if the working directory is clean or not.
-function __set_my_prompt {
+function __set_my_refined_prompt {
     # previous_command_status - pcs
     local pcs=$?
 
@@ -56,7 +56,7 @@ function __set_my_prompt {
     PS1="\n\[${GREEN}\]\u 💻 \[${GREY}\]\h \[${BLUE}\]\w\[${CYAN}\]$(__git_ps1)\n$pcsc❯\[${NOCOLOR}\] "
 }
 
-PROMPT_COMMAND='__set_my_prompt'
+PROMPT_COMMAND='__set_my_refined_prompt'
 
 folder_path="<full_path_to_dir>/ascii_memes"
 file_count=$(ls $folder_path | wc -l) # returns the number of files in a directory

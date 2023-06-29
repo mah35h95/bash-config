@@ -58,9 +58,10 @@ function __set_my_prompt {
 
 PROMPT_COMMAND='__set_my_prompt'
 
-file_count=$(ls ./ascii_memes | wc -l) # returns the number of files in a directory
-random=$$                              # PID of shell is stored in $$ variable
-file_name="./ascii_memes/$(($random % $file_count)).txt"
+folder_path="<full_path_to_dir>/ascii_memes"
+file_count=$(ls $folder_path | wc -l) # returns the number of files in a directory
+random=$$                             # PID of shell is stored in $$ variable
+file_name="$folder_path/$(($random % $file_count)).txt"
 
 # print while startup if file exists
 test -f $file_name && cat $file_name

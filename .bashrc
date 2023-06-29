@@ -58,10 +58,17 @@ function __set_my_refined_prompt {
 
 PROMPT_COMMAND='__set_my_refined_prompt'
 
-folder_path="<full_path_to_dir>/ascii_memes"
-file_count=$(ls $folder_path | wc -l) # returns the number of files in a directory
-random=$$                             # PID of shell is stored in $$ variable
-file_name="$folder_path/$(($random % $file_count)).txt"
+# random=$RANDOM
+random=$$ # PID of shell is stored in $$ variable and $RANDOM also contains the same value
+function __show_a_meme {
+    echo $random
+    folder_path="<full_path_to_dir>/ascii_memes"
+    file_count=$(ls $folder_path | wc -l) # returns the number of files in a directory
+    file_name="$folder_path/$(($random % $file_count)).txt"
+    random=$(($random + 1))
 
-# print while startup if file exists
-test -f $file_name && cat $file_name
+    # print while startup if file exists
+    test -f $file_name && cat $file_name
+}
+
+__show_a_meme

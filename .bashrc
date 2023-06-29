@@ -62,5 +62,5 @@ file_count=$(ls ./ascii_memes | wc -l) # returns the number of files in a direct
 random=$$                              # PID of shell is stored in $$ variable
 file_name="./ascii_memes/$(($random % $file_count)).txt"
 
-# print while startup
-cat "$file_name"
+# print while startup if file exists
+test -f $file_name && cat $file_name

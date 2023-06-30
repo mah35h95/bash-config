@@ -25,7 +25,7 @@ function __set_my_refined_prompt {
         pcsc="\[${RED}\]"
     fi
 
-    PS1="\n\[${GREEN}\]\u 💻 \[${GREY}\]\h \[${BLUE}\]\w\[${CYAN}\]$(__git_ps1)\n$pcsc❯\[${NOCOLOR}\] "
+    PS1="\n\[${GREEN}\]\u 💻 \[${GREY}\]\h \[${BLUE}\]$PWD\[${CYAN}\]$(__git_ps1)\n$pcsc❯\[${NOCOLOR}\] "
 }
 PROMPT_COMMAND='__set_my_refined_prompt'
 

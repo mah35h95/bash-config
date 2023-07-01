@@ -33,7 +33,7 @@ PROMPT_COMMAND='__set_my_refined_prompt'
 # random=$RANDOM
 random=$$ #? PID of shell is stored in $$ variable and $RANDOM also contains the same value
 function __show_a_meme {
-    folder_path="<full_path_to_dir>/ascii_memes"
+    folder_path=~/.bash-config/ascii_memes
     file_count=$(ls $folder_path | wc -l) #? returns the number of files in a directory
     file_name="$folder_path/$(($random % $file_count)).txt"
     random=$(($random + 1))

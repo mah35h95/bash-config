@@ -25,7 +25,7 @@ function __set_my_refined_prompt {
         pcsc="\[${RED}\]"
     fi
 
-    PS1="\n\[${GREEN}\]\u \[${NOCOLOR}\]💻 \[${GREY}\]\h \[${BLUE}\]$PWD\[${CYAN}\]$(__git_ps1)\n$pcsc❯\[${NOCOLOR}\] "
+    PS1="\n\[${GREEN}\]\u \[${NOCOLOR}\]💻 \[${GREY}\]\h \[${BLUE}\]$PWD\[${CYAN}\]$(GIT_PS1_SHOWUNTRACKEDFILES=1 GIT_PS1_SHOWDIRTYSTATE=1 __git_ps1)\n$pcsc❯\[${NOCOLOR}\] "
 }
 PROMPT_COMMAND='__set_my_refined_prompt'
 
@@ -50,6 +50,10 @@ unset HISTFILESIZE
 HISTSIZE=3000
 export HISTSIZE PROMPT_COMMAND
 shopt -s histappend
+
+#* Start ble.sh
+source ~/.local/share/blesh/ble.sh
+clear
 
 #* Show the meme on start up
 __show_a_meme

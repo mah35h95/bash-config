@@ -52,6 +52,7 @@ export HISTSIZE PROMPT_COMMAND
 shopt -s histappend
 
 #* Start ble.sh
+#? https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions
 source ~/.local/share/blesh/ble.sh
 clear
 

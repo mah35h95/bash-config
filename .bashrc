@@ -51,10 +51,9 @@ HISTSIZE=3000
 export HISTSIZE PROMPT_COMMAND
 shopt -s histappend
 
-#* Start ble.sh
+#* Alias to start ble.sh when you want to
 #? https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions
-source ~/.local/share/blesh/ble.sh
-clear
+alias af="source ~/.local/share/blesh/ble.sh"
 
 #* Show the meme on start up
 __show_a_meme

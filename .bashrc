@@ -1,5 +1,15 @@
 #!/usr/bin/bash
 
+#* clean bash_history
+awk 'BEGIN{FS=":"} 
+        FNR==NR {for (i=1; i<=NF; i++) {dup[$i]++; last[$i]=NR;} next}
+        /^$/ {next}
+        {for (i=1; i<=NF; i++) 
+            if (dup[$i] && FNR==last[$i]) {print $0; next}}
+        ' ../.bash_history ../.bash_history >bash_history.txt
+cp bash_history.txt ../.bash_history
+rm bash_history.txt
+
 #* custome prompt function
 function __set_my_refined_prompt {
     #? previous_command_status - pcs
@@ -47,7 +57,7 @@ export HISTCONTROL=ignoredups:erasedups
 
 #* To update the history from any place bash is opened
 unset HISTFILESIZE
-HISTSIZE=3000
+HISTSIZE=10000
 export HISTSIZE PROMPT_COMMAND
 shopt -s histappend
 

@@ -6,8 +6,8 @@ awk 'BEGIN{FS=":"}
         /^$/ {next}
         {for (i=1; i<=NF; i++) 
             if (dup[$i] && FNR==last[$i]) {print $0; next}}
-        ' ./.bash_history ./.bash_history >bash_history.txt
-cp bash_history.txt ./.bash_history
+        ' ../.bash_history ../.bash_history >bash_history.txt
+cp bash_history.txt ../.bash_history
 rm bash_history.txt
 
 #* custome prompt function

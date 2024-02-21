@@ -11,7 +11,7 @@ awk 'BEGIN{FS=":"}
         ' ../.bash_history ../.bash_history >bash_history.txt
 cp bash_history.txt ../.bash_history
 rm bash_history.txt
-cd $current_path
+cd "$current_path"
 
 #* custome prompt function
 function __set_my_refined_prompt {

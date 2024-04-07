@@ -64,8 +64,13 @@ HISTSIZE=10000
 export HISTSIZE PROMPT_COMMAND
 shopt -s histappend
 
-#* Alias to start ble.sh when you want to
-#? https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions
+#? Aliases
+#* Directory
+alias la='ls -al'
+#* mpv
+alias mpv='mpv.exe'
+alias mpvf='mpv.exe "$(fzf)"'
+#* ble.sh - https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions
 alias af="source ~/.local/share/blesh/ble.sh"
 
 #* Show the meme on start up

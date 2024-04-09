@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+#* Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 #* clean bash_history
 current_path=$(pwd)
 cd ~/.bash-config

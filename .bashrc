@@ -72,7 +72,8 @@ shopt -s histappend
 alias la='ls -al'
 #* mpv
 alias mpv='mpv.exe'
-alias mpvf='video_file=$(fzf) && mpv.exe "$video_file" && echo $video_file'
+alias mpvf='video_file=$(fzf) && mpv.exe "$video_file" && echo "$video_file"'
+alias frm='rm_file=$(fzf) && rm "$rm_file" && echo "Deleted $rm_file"'
 #* ble.sh - https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#quick-instructions
 alias af="source ~/.local/share/blesh/ble.sh"
 

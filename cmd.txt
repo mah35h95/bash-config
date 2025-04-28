@@ -1,0 +1,22 @@
+mvn build
+mvn clean compile
+__show_a_meme
+clear
+deno task dev
+gcloud auth activate-service-account --key-file=
+gcloud auth application-default login
+gcloud auth login
+gcloud auth revoke #svc_email
+gcloud config set project dev-2367-entdataingst-5a9bf0
+git checkout -
+git checkout -b #branch_name
+scoop cache rm -a
+scoop cleanup -a
+scoop update -a
+gcloud auth print-access-token
+gcloud auth print-identity-token
+powershell ./spotiy.ps1
+spicetify update
+terraform fmt --recursive
+sh "C:/Users/GM/Documents/local_dev/script-me/gcp/gcp-open.sh"
+__clean_up

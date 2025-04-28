@@ -4,19 +4,26 @@
 eval "$(fzf --bash)"
 
 #* clean bash_history
-current_path=$(pwd)
-cd ~/.bash-config
-awk 'BEGIN{FS=":"} 
-        FNR==NR {for (i=1; i<=NF; i++) {dup[$i]++; last[$i]=NR;} next}
-        /^$/ {next}
-        {for (i=1; i<=NF; i++) 
-            if (dup[$i] && FNR==last[$i]) {print $0; next}}
-        ' ../.bash_history ../.bash_history >bash_history.txt
-cp bash_history.txt ../.bash_history
-rm bash_history.txt
-cd "$current_path"
+function __clean_up {
+    current_path=$(pwd)
+    cd ~/.bash-config
 
-#* custome prompt function
+    cat cmd.txt >> ../.bash_history
+
+    awk 'BEGIN{FS=":"}
+            FNR==NR {for (i=1; i<=NF; i++) {dup[$i]++; last[$i]=NR;} next}
+            /^$/ {next}
+            {for (i=1; i<=NF; i++)
+                if (dup[$i] && FNR==last[$i]) {print $0; next}}
+            ' ../.bash_history ../.bash_history >bash_history.txt
+    
+    cp bash_history.txt ../.bash_history
+    rm bash_history.txt
+
+    cd "$current_path"
+}
+
+#* custom prompt function
 function __set_my_refined_prompt {
     #? previous_command_status - pcs
     local pcs=$?

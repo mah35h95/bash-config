@@ -20,3 +20,6 @@ spicetify update
 terraform fmt --recursive
 sh "C:/Users/GM/Documents/local_dev/script-me/gcp/gcp-open.sh"
 __clean_up
+ls -alR > ../tree.txt
+yt-dlp -t mp3 
+yt-dlp -t mp4 

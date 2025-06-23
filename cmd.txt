@@ -3,7 +3,7 @@ mvn clean compile
 __show_a_meme
 clear
 deno task dev
-gcloud auth activate-service-account --key-file=
+gcloud auth activate-service-account --key-file=#svc_email_json_secret_file_path
 gcloud auth application-default login
 gcloud auth login
 gcloud auth revoke #svc_email
@@ -21,5 +21,26 @@ terraform fmt --recursive
 sh "C:/Users/GM/Documents/local_dev/script-me/gcp/gcp-open.sh"
 __clean_up
 ls -alR > ../tree.txt
-yt-dlp -t mp3 
-yt-dlp -t mp4 
+yt-dlp -t mp3 #list_links
+yt-dlp -t mp4 #list_links
+temporal server start-dev
+git rebase --abort
+git rebase --continue
+git rebase -i #branch_name
+mvn dependency:tree > tree.log
+terraform state list
+terraform state rm #list_all_the_tf_module_names_from_state_list
+git diff main --name-only
+terraform init
+terraform workspace list
+terraform workspace select #select_workspace_from_list
+terraform init -migrate-state #to_migrate_tf_states
+terraform state replace-provider -auto-approve "registry.terraform.io/-/google" "hashicorp/google"
+terraform state replace-provider -auto-approve "registry.terraform.io/-/google-beta" "hashicorp/google-beta"
+dbt clean
+dbt deps
+dbt parse
+git reset
+git checkout . #unstage_changes
+git clean -fdx #remove_all_untracked_changes
+go get -u

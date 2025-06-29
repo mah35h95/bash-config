@@ -44,3 +44,11 @@ git reset
 git checkout . #unstage_changes
 git clean -fdx #remove_all_untracked_changes
 go get -u
+git config --global credential.helper store
+sudo apt-get install build-essential
+sudo systemctl start postgresql
+sudo systemctl status postgresql
+sudo systemctl stop postgresql
+sudo mount -t drvfs C: /mnt/c
+sudo umount /mnt/c
+sudo -u postgres psql postgres

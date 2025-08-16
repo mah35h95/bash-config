@@ -1,0 +1,12 @@
+[tools]
+"asdf:maven" = "latest"
+go = "latest"
+java = "17.0.2"
+protoc = "latest"
+terraform = "latest"
+fzf = "latest"
+erlang = "latest"
+elixir = "latest"
+python = "3.12"
+node = "24.5.0"
+jj = "latest"

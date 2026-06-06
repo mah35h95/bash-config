@@ -164,7 +164,7 @@ function __open_gcp {
         exit 0
     fi
 
-    start "https://console.cloud.google.com/$service?project=$project"
+    open "https://console.cloud.google.com/$service?project=$project"
 }
 
 #* random meme printer

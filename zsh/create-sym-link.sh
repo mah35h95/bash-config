@@ -1,0 +1,1 @@
+ln -s /Users/gm/dev/random-dev/bash-config/zsh/.zshrc /Users/gm/.zshrc

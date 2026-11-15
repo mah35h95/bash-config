@@ -119,7 +119,7 @@ function __clean_up {
             {for (i=1; i<=NF; i++)
                 if (dup[$i] && FNR==last[$i]) {print $0; next}}
             ' ./.bash_history ./.bash_history >bash_history.txt
-    
+
     cp bash_history.txt ./.bash_history
     rm bash_history.txt
 
@@ -144,7 +144,7 @@ function __clean_up_zsh {
             {for (i=1; i<=NF; i++)
                 if (dup[$i] && FNR==last[$i]) {print $0; next}}
             ' ./.zsh_history ./.zsh_history >zsh_history.txt
-    
+
     cp zsh_history.txt ./.zsh_history
     rm zsh_history.txt
 

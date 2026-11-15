@@ -1,0 +1,9 @@
+# window size
+window-height=36
+window-width=111
+
+# font family
+font-family = MonaspiceAr Nerd Font
+
+# theme
+theme = Catppuccin Mocha

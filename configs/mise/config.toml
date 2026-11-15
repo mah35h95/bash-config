@@ -1,9 +1,10 @@
+[settings.self_update]
+auto = true
+
 [tools]
-"maven" = "latest"
 go = "latest"
-java = "17.0.2"
+java = "latest"
 protoc = "latest"
-terraform = "latest"
 fzf = "latest"
 jj = "latest"
 node = "lts"
@@ -14,6 +15,4 @@ erlang = "28.4"
 python = "latest"
 uv = "latest"
 rtk = "latest"
-
-[settings.self_update]
-auto = true
+maven = "latest"

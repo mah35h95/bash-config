@@ -1,5 +1,5 @@
 [tools]
-"asdf:maven" = "latest"
+"maven" = "latest"
 go = "latest"
 java = "17.0.2"
 protoc = "latest"

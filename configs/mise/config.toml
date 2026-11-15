@@ -3,8 +3,9 @@ auto = true
 
 [tools]
 go = "latest"
-java = "latest"
+java = "17.0.2"
 protoc = "latest"
+terraform = "latest"
 fzf = "latest"
 jj = "latest"
 node = "lts"
